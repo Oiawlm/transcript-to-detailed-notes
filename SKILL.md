@@ -89,9 +89,11 @@ Output format:
 ...
 ```
 
-### Phase 5: Save
+### Phase 5: Save and offer to publish
 
 Save to `~/AppData/Local/hermes/transcript-notes/[inferred-title].md`. If Obsidian vault is configured (OBSIDIAN_VAULT_PATH env var), also copy there under a `Transcript-Notes/` folder.
+
+After saving, proactively ask the user: "要发布到课程笔记仓库吗？" If yes, invoke `publish-course-notes` skill.
 
 ## Quality Gate (before showing to user)
 
@@ -111,3 +113,10 @@ Re-read the output and verify:
 > 产品的核心功能是自动处理重复性工作。这是用户反馈的主要痛点——每天花大量时间在重复事务上。上线后用户时间节省约 40%。
 
 All information preserved. Language cleaned. Word count reduced but substance identical.
+
+## Pitfalls
+
+- **Don't mechanically chunk-and-forget.** For transcripts under ~150KB, read the entire thing first to build a thematic mental model, then extract. Mechanical chunk processing loses cross-references and topic threads that span sections.
+- **Use structural markers.** Speaker labels, timestamps, and natural pauses are section boundaries. Use them to identify topic shifts rather than cutting at arbitrary character counts.
+- **Reorganize, don't transcribe.** Chronological transcript order is rarely the best structure. Speakers jump between topics — you should regroup by theme.
+- **Oral→written is not just deleting words.** Some oral expressions carry nuance (tone, emphasis, hedging) that pure text loses. If the speaker is being cautious or uncertain, preserve that signal.
