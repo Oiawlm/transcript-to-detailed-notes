@@ -45,6 +45,10 @@ Trigger phrases: "process this transcript", "整理文字稿", "detailed notes",
 
 All information preserved. Language cleaned. Substance identical.
 
+## See It In Action
+
+Real examples: [ai-course-notes](https://github.com/Oiawlm/ai-course-notes) — 直播文字稿 + 结构化笔记。
+
 ## Platforms
 
 - Claude Code
